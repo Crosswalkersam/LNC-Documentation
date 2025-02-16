@@ -95,31 +95,31 @@ class LNC(Instrument):
 
     fractional_reg = Instrument.measurement(
         "228:PLL:FRAC?",
-        "Returns the contents of the integer register",
+        "Returns the contents of the fractional register",
         cast=int
     )
 
     modulus_reg = Instrument.measurement(
         "228:PLL:MOD?",
-        "Returns the contents of the integer register",
+        "Returns the contents of the modulus register",
         cast=int
     )
 
     phasedetector_frequency = Instrument.measurement(
         "228:PLL:FPFD?",
-        "Returns the contents of the integer register",
+        "Returns the current phasedetector frequency",
         cast=int
     )
 
     channelspacing = Instrument.measurement(
         "228:PLL:CHSP?",
-        "Returns the contents of the integer register",
+        "Returns the current channelspacing",
         cast=int
     )
 
     RF_divider = Instrument.measurement(
         "228:PLL:RFDV?",
-        "Returns the contents of the integer register",
+        "Returns the current RF divider value",
         cast=int,
         map_values=True,
         values={1: 0, 2: 1, 4: 2, 8: 3, 16: 4, 32: 5, 64: 6}
